@@ -15,30 +15,7 @@ const Login = () => {
 
     const onSubmit = async e => {
         e.preventDefault();
-        
-            const newUser = {
-                email,
-                password
-            }
-
-            try {
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                };
-
-                const body = JSON.stringify(newUser);
-
-                const res = await axios.post('/api/users', body, config);
-                console.log(res.data);
-
-            } catch (err) {
-
-                console.error(err.response.data);
-                
-            }
-        
+        console.log('Success');
     };
 
 
@@ -69,5 +46,4 @@ const Login = () => {
     </Fragment>
     )
 };
-
 export default Login
