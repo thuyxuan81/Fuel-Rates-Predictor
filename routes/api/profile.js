@@ -168,10 +168,11 @@ router.put('/quotelist', [auth, [
             return res.status(400).json({msg: 'Profile not found'});
         }
         newQuote.deliveryAddress = profile.address1;
-        res.json(newQuote.gallons);
+        newQuote.suggestedPrice = 0;
+        newQuote.totalPrice = 0;
         profile.quoteList.unshift(newQuote);
         await profile.save();
-        //res.json(profile.quoteList);
+        res.json(profile.quoteList);
 
     } catch (err) {
         console.error(err.message);
