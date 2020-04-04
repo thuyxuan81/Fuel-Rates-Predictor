@@ -7,9 +7,13 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
+<<<<<<< HEAD
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
     "test": "./node_modules/jasmine/bin/jasmine.js"
+=======
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+>>>>>>> f3c8df716ce97abbfc382640b41a01e1a8ca5b20
   },
   "author": "Thuy Nguyen",
   "license": "ISC",
