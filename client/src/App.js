@@ -5,6 +5,12 @@ import Landing from './components/layout/Landing'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Alert from './components/layout/Alert'
+import Dashboard from './components/dashboard/Dashboard'
+import confirm from './components/dashboard/confirm'
+import CreateProfile from './components/profile-forms/CreateProfile'
+import EditProfile from './components/profile-forms/EditProfile'
+import addFuel from './components/profile-forms/FuelQuotes'
+import PrivateRoute from './components/routing/PrivateRoute'
 
 // Redux
 import { Provider } from 'react-redux'
@@ -34,6 +40,19 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
+              <PrivateRoute exact path='/confirm' component={confirm} />
+              <PrivateRoute
+                exact
+                path='/create-profile'
+                component={CreateProfile}
+              />
+              <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={EditProfile}
+              />
+              <PrivateRoute exact path='/add-fuel' component={addFuel} />
             </Switch>
           </section>
         </Fragment>
