@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Moment from 'react-moment'
 import { Link } from 'react-router-dom'
 import { deleteFuel } from '../../actions/profile'
 
@@ -12,9 +11,7 @@ const confirmFuel = ({ quoteList, deleteFuel }) => {
       <tr key={f._id}>
         <td>{f.gallons}</td>
         <td>{f.deliveryAddress + ' ' + f.deliveryAddress2}</td>
-        <td>
-          <Moment format='YYYY/MM/DD'>{f.deliveryDate}</Moment>
-        </td>
+        <td>{f.deliveryDate}</td>
         <td>${f.suggestedPrice}</td>
         <td>${f.totalPrice}</td>
         <td>

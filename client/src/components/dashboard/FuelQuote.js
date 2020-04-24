@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Moment from 'react-moment'
 
 const FuelQuote = ({ quoteList }) => {
   const fuel =
@@ -10,9 +9,7 @@ const FuelQuote = ({ quoteList }) => {
       <tr key={f._id}>
         <td>{f.gallons}</td>
         <td>{f.deliveryAddress + ' ' + f.deliveryAddress2}</td>
-        <td>
-          <Moment format='YYY/MM/DD'>{f.deliveryDate}</Moment>
-        </td>
+        <td>{f.deliveryDate}</td>
         <td>${f.suggestedPrice}</td>
         <td>${f.totalPrice}</td>
       </tr>
