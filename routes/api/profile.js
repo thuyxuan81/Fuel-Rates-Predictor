@@ -173,12 +173,21 @@ router.put(
         return res.status(400).json({ msg: 'Profile not found' })
       }
 
+      date1 = newQuote.deliveryDate
+      month = date1[5] + date1[6] + date1[8] + date1[9]
+      day = parseInt(month)
       var current = 1.5
       var location
       var hist
       var galRequested
       var profit = 0.1
       var fluctuation = 0
+
+      if (day > 620 && day < 922) {
+        fluctuation = 0.04
+      } else {
+        fluctuation = 0.03
+      }
 
       if (profile.state === 'TX') {
         location = 0.02

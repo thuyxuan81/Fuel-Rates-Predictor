@@ -45,7 +45,7 @@ const ProfileSchema = new mongoose.Schema({
       },
 
       deliveryDate: {
-        type: Date,
+        type: String,
         required: true,
       },
       suggestedPrice: {
