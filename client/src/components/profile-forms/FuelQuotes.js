@@ -45,7 +45,7 @@ const FuelQuotes = ({ addFuel, history }) => {
           <input
             type='date'
             name='deliveryDate'
-            min='2020-04-23'
+            min='2020-04-24'
             max='2050-01-01'
             value={deliveryDate}
             onChange={(e) => onChange(e)}
